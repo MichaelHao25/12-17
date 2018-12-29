@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<!-- 优先使用 IE 最新版本和 Chrome -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- 启用360浏览器的极速模式(webkit) -->
+	<!-- <link rel="shortcut icon" type="image/ico" href="/favicon.ico"/> -->
+	<!-- 添加 favicon icon -->
+	<meta name="renderer" content="webkit">
+	<meta name="design-width" content="750">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/calendar.css">
+	<link rel="stylesheet" href="css/public.css" />
+	<script src="js/font-size.js"></script>
+</head>
+
+<body class="body-full">
+	<div class="full-background">
+		<header class="header">
+			<h1 class="main-title">自主预约</h1>
+		</header>
+		<main class="main">
+			<div class="form">
+				<div class="pt80">
+					<div class="calendar-container p0-60">
+						<input
+						type="text"
+						class="calendars input"
+						format="dd/MM/yyyy"
+						shield="['2018/12/28']"
+						appointment='{"2018/12/27":"10","2018/12/26":"10"}'
+						placeholder="选择日期"
+						>
+					</div>
+					<div class="pt30">
+					</div>
+					<div class="user-type p0-90 jc-fs">
+						<div class="radio active">上午</div>
+						<div class="radio ml30">下午</div>
+					</div>
+					<div class="p0-60 df">
+						<div class="pt30">
+						</div>
+						<div class="pb10">
+							<input type="text" class="input" placeholder="备注留言">
+						</div>
+						<div class="pb10">
+							<input type="text" class="input" placeholder="其它字段">
+						</div>
+						<div class="pt30"></div>
+						<button class="submit js_layout">提交预约申请</button>
+						<div class="pt140"></div>
+						<div class="time-tel">
+							<p class="fz30">预约热线：<span class="cb88400">020-66668888</span></p>
+							<p>周一至周六 8:30-12:00 / 13:00-17:30</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<div class="msg-layout-success">
+			<div class="msg">您的预约申请提交成功，我们将在24小时内给您回复预约结果。</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/calendar.js"></script>
+	<script src='js/js.js'></script>
+</body>
+
+</html>

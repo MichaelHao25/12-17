@@ -1,0 +1,952 @@
+@import 'reset.css'
+
+/* 引入css文件的一种方式 */
+/*
+
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=#99ffffff,endColorstr=#99ffffff)";
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99ffffff,endColorstr=#99ffffff);
+background:rgba(255,255,255,.8);
+
+
+ filter:alpha(opacity=40); 针对 IE8 以及更早的版本 */
+body
+	font-size 16Px
+
+body.body-full
+	max-width 750Px
+
+body
+	position relative
+
+input
+	&::placeholder
+		font-family 'mocrosoft Yahei'
+
+.df
+	display flex
+	flex-direction column
+
+.fd-r
+	flex-direction row
+
+.jc-sb
+	justify-content space-between
+
+.pb10
+	padding-bottom 10px
+
+.pt30
+	padding-top 30px
+
+.pt40
+	padding-top 40px
+
+.pt80
+	padding-top 80px
+
+.pt140
+	padding-top 140px
+
+.pt180
+	padding-top 180px
+
+.pt220
+	padding-top 220px
+
+.pb30
+	padding-bottom 30px
+
+.p0-40
+	padding 0 40px
+
+.p0-50
+	padding 0 50px
+
+.p0-60
+	padding 0 60px
+
+.ml30
+	margin-left 30px
+
+.h100
+	height 100%
+
+.h100-90
+	height calc(100vh - 90px)
+
+.h100-91
+	height calc(100% - 92px)
+
+.h100-196
+	height calc(100% - 196px - 3Px)
+
+.full-background
+	min-height 100vh
+	background url('../img/ae7d6_1_750_1334.jpg') center center / cover no-repeat
+
+	&.auto
+		min-height auto
+
+.header
+	background url('../img/79198_0_750_120.jpg') center center / cover no-repeat
+
+	.personal-center-title
+		height 80px
+		color #ffffff
+		text-align left
+		font-size 30px
+		line-height 80px
+
+	.brand
+		display flex
+		justify-content center
+		align-items center
+		height 120px
+
+		a, img
+			display block
+			width 328px
+
+	.main-title
+		height 90px
+		color #ffffff
+		text-align center
+		font-size 30px
+		line-height 90px
+
+	.sub-title
+		display flex
+		justify-content space-between
+		height 90px
+		color #ffffff
+		font-size 30px
+		line-height 90px
+
+		a
+			padding 0 10px 0 62px
+			background url('../img/e4c0d_3_52_52.png') left center / 52px auto no-repeat
+			font-size 28px
+
+.main
+	.language
+		position absolute
+		top 175px
+		right 60px
+		display flex
+		justify-content space-around
+		align-items center
+		width 126px
+		height 66px
+		border-radius 33px
+		background #ffffff
+		color #332914
+		font-size 28px
+
+		&.active
+			&:after
+				right 63px
+				left 3px
+				transition 0.2s left, 0.3s right 0.1s
+
+		&:after
+			position absolute
+			top 3px
+			right 3px
+			bottom 3px
+			left 63px
+			border-radius 30px
+			background #09345a
+			content ''
+			transition 0.2s right, 0.3s left 0.1s
+
+		span
+			position relative
+			z-index 1
+			transition 0.3s
+
+		.active
+			color #e1b763
+
+	.form
+		.user-type
+			display flex
+			justify-content space-between
+			padding 0 160px
+
+			&.p0-90
+				padding 0 90px
+
+			&.jc-fs
+				justify-content flex-start
+
+			.radio
+				position relative
+				padding-left 50px
+				height 44px
+				color #727980
+				font-size 28px
+				line-height 44px
+				transition 0.3s
+				transition 0.3s
+
+				&:after
+					position absolute
+					left 0
+					width 44px
+					height 44px
+					background url('../img/23d74_1_38_38.png') center center / 38px auto no-repeat
+					content ''
+
+				&.active
+					color #ffffff
+
+					&:after
+						background-image url('img/3e312_2_43_43.png')
+						background-size 43px 43px
+
+		.input
+			box-sizing border-box
+			box-sizing border-box
+			padding 0 40px
+			width 100%
+			height 105px
+			outline none
+			border none
+			border-radius 3px
+			background #132442
+			color #ffffff
+			font-size 30px
+
+			&::placeholder
+				color #727980
+
+		.w400
+			width 400px
+
+		.submit
+			height 105px
+			outline none
+			border none
+			border-radius 3px
+			background #947338
+			color #ffffff
+			font-size 36px
+
+		.more-option
+			display flex
+			justify-content space-around
+			color #727171
+			font-size 30px
+
+			a+a
+				color #947338
+
+		.tips
+			color #ffffff
+			text-align center
+			font-size 28px
+			line-height 40px
+
+		.get-code
+			width 210px
+			height 105px
+			border-radius 3px
+			background #6d593c
+			color #ffffff
+			text-align center
+			font-size 30px
+			line-height 105px
+
+		.time-tel
+			color #ffffff
+			text-align center
+			font-size 28px
+			line-height 50px
+
+			.fz30
+				font-size 30px
+
+			.cb88400
+				color #b88400
+
+	.select-hospital
+		.city
+			border-bottom 1px solid #727980
+			background #062f55
+
+			.scroll
+				overflow scroll
+				height 90px
+				color #9d7c46
+				white-space nowrap
+				font-size 30px
+				line-height 90px
+				-webkit-overflow-scrolling touch
+
+				&::-webkit-scrollbar
+					display none
+
+			span
+				margin-right 40px
+
+				&.active
+					color #ffffff
+
+		.container
+			display flex
+			overflow hidden
+			color #ffffff
+			font-size 30px
+
+			.flex-1
+				flex 1
+				width 50%
+
+			.list, .type
+				overflow scroll
+				height 100%
+				-webkit-overflow-scrolling touch
+
+				&::-webkit-scrollbar
+					display none
+
+			.type
+				background #063d69
+				font-size 32px
+
+			.list
+				.item
+					overflow hidden
+					box-sizing border-box
+					padding-left 90px
+					width 100%
+					height 88px
+					border-bottom 1px solid #727980
+					text-overflow ellipsis
+					white-space nowrap
+					font-weight normal
+					line-height 88px
+					transition 0.3s
+
+					&.full-row
+						padding 0 40px
+						background url('../img/4fc9f_5_17_31.png') right 40px center / 17px auto no-repeat
+
+					&.vip
+						position relative
+
+						&:after
+							position absolute
+							top 0
+							bottom 0
+							left 35px
+							width 47px
+							background url('../img/90d26_4_47_40.png') left center / 47px auto no-repeat
+							content ''
+
+					&.active
+						background-color #063d69
+
+			.type
+				.item
+					display block
+					overflow hidden
+					margin 0 40px
+					height 86px
+					border-bottom 3px solid transparent
+					background url('../img/4fc9f_5_17_31.png') right center / 17px auto no-repeat
+					text-overflow ellipsis
+					white-space nowrap
+					line-height 86px
+
+					&.active
+						border-bottom-color #9d7c46
+
+	.personal-center
+		.user-base-info
+			display flex
+			align-items center
+			padding 0 36px
+			height 200px
+
+			.pic
+				overflow hidden
+				width 125px
+				height 125px
+				border 3px solid #fff
+				border-radius 50%
+
+				img
+					display block
+					width 100%
+
+			.info
+				padding-left 30px
+				color #fff
+
+				.name
+					font-size 30px
+
+				p
+					color #727980
+					font-size 28px
+					line-height 2
+
+					span
+						padding 0 20px
+
+				.form
+					padding-left 36px
+					background url('../img/eb6f5_7_29_32.png') left center / 29px auto no-repeat
+					font-size 28px
+
+		.modal
+			.title
+				padding 0 50px
+				height 80px
+				background #775f38
+				color #ffffff
+				font-size 30px
+				line-height 80px
+
+			.list
+				border-top 1px solid #e5e5e4
+
+				a
+					display block
+					padding 0 50px
+					height 78px
+					border-bottom 1px solid #e5e5e4
+					background #fff url('../img/a85d7_8_17_31.png') right 50px center / 17px auto no-repeat
+					color #353535
+					font-size 30px
+					line-height 78px
+
+					.cb88615
+						color #b88615
+
+	.appointment-record-list
+		overflow hidden
+		margin-top 1px
+
+		.item
+			margin-bottom 28px
+
+			&.m0
+				margin 0
+
+			.item-header
+				display flex
+				justify-content space-between
+				align-items center
+				height 69px
+				border-top 1px solid #e5e5e4
+				border-bottom 1px solid #e5e5e4
+				background #f2f2f2
+				font-size 28px
+
+				.time
+					color #353535
+
+				.status
+					color #775f38
+
+			.item-content
+				display flex
+				justify-content space-between
+				align-items flex-end
+				padding-top 10px
+				padding-bottom 28px
+				border-bottom 1px solid #e5e5e4
+				background #ffffff
+				color #353535
+				font-size 28px
+
+				p
+					display flex
+					align-items center
+					padding 20px 0
+					font-size 30px
+
+					span
+						margin 0 10px
+						width 3px
+						height 100%
+						height 30px
+						background #775f38
+
+				.btn
+					a
+						display block
+						width 140px
+						height 54px
+						border-radius 27px
+						background #775f38
+						color #ffffff
+						text-align center
+						line-height 54px
+
+						&.evaluation
+							background #063c68
+							color #ffffff
+
+			.result
+				padding-top 20px
+				padding-bottom 20px
+				border-bottom 1px solid #e5e5e4
+				background #ffffff
+				color #727980
+				font-size 28px
+				line-height 1.5
+			.reply
+				padding-top 20px
+				padding-bottom 20px
+				background #ffffff
+				.servers
+					padding 10px 20px
+					line-height 1.5
+					font-size 24px
+					border-radius 10px
+					color #727980
+					background #f2f2f2
+				a
+					font-size 28px
+					color #b2801d
+					margin-top 15px
+
+	.appointment-record-evaluation
+		.title-r
+			height 80px
+			background url('../img/79198_0_750_120.jpg') center center / cover no-repeat
+			color #ffffff
+			text-align left
+			font-size 30px
+			line-height 80px
+
+		.bgf-bdt-b
+			border-top 1px solid #e5e5e4
+			border-bottom 1px solid #e5e5e4
+			background #f2f2f2
+			color #353535
+
+		.container
+			padding-top 15px
+			padding-bottom 15px
+			background #ffffff
+
+			.row
+				display flex
+				justify-content flex-start
+				align-items center
+				height 60px
+				color #353535
+				font-size 30px
+				line-height 60px
+
+				.title
+					width 150px
+					background none
+					color #353535
+
+				.star
+					position relative
+					display flex
+					width 256px
+					height 100%
+					background url('../img/b189b_9_256_36.png') left center / 256px no-repeat
+
+					.color
+						position absolute
+						height 100%
+						background url('../img/d627b_10_256_36.png') left center / 256px no-repeat
+						transition 0.3s
+
+					span
+						position relative
+						z-index 1
+						flex 1
+
+		.text
+			display flex
+			flex-direction column
+			padding 25px 50px 50px
+
+			textarea
+				margin-bottom 40px
+				padding 8px 15px
+				min-width 190px
+				outline none
+				border 1px solid #e5e5e4
+				border-radius 5px
+				color #353535
+				font-size 28px
+				line-height 2
+
+				&::placeholder
+					color #727980
+
+			button
+				height 80px
+				outline none
+				border none
+				border-radius 5px
+				background #063c68
+				color #fafafa
+				text-align center
+				line-height 80px
+	.evaluation-list-disabled
+		border-bottom 1px solid #e5e5e4
+		.title-r
+			background #f2f2f2
+			color #353535
+			height 70px
+			font-size 30px
+			line-height 70px
+			border-bottom 1px solid #e5e5e4
+	.clinic-details
+		.swiper
+			img, a
+				display block
+				width 100%
+
+			.swiper-pagination
+				right 50px
+				bottom 20px
+				left 50px
+				width auto
+				text-align right
+				font-size 0
+
+				span
+					background #fff
+					opacity 1
+
+				.swiper-pagination-bullet-active
+					background #b78313
+
+		h1
+			height 100px
+			color #ffffff
+			text-align center
+			font-size 36px
+			line-height 100px
+
+		.info
+			background #132442
+
+			.tel, .location
+				display flex
+				padding 0 50px
+				border-top 1px solid #e5e5e4
+
+				.icon
+					position relative
+					display block
+					padding-left 80px
+					height 100%
+
+					&:after
+						position absolute
+						top 0
+						bottom 0
+						left 0
+						width 60px
+						background url('../img/0b9b9_3_43_44.png') center center / 43px auto no-repeat
+						content ''
+
+			.tel
+				display block
+				height 80px
+				color #fff
+				font-size 24px
+				line-height 80px
+
+			.location
+				display flex
+				flex-direction row
+				justify-content space-between
+				align-items center
+				padding 15px 50px
+
+				.icon
+					flex 0 0 400px
+					color #ffffff
+					font-size 24px
+					line-height 30px
+
+					&:after
+						background-image url('../img/01d53_4_50_50.png')
+						background-size 50px auto
+
+				a
+					display block
+					width 100px
+					height 50px
+					border-radius 5px
+					background #9d7c46
+					color #ffffff
+					text-align center
+					font-size 28px
+					line-height 50px
+
+		.describe
+			padding 40px 50px
+			background #06355e
+			color #ffffff
+			font-size 28px
+			line-height 2
+
+		.list-c
+			dt
+				display flex
+				justify-content space-between
+				align-items center
+				padding 0 50px
+				height 70px
+				background #ffffff
+				color #034991
+				font-size 32px
+
+				h3
+					padding-left 60px
+					background url('../img/ed5f0_5_43_42.png') left center / 43px auto no-repeat
+
+				a
+					color #9d7c46
+					font-size 28px
+
+			dd
+				position relative
+				padding 0 50px
+				height 90px
+				background #051938
+				color #ffffff
+				font-size 32px
+				line-height 90px
+
+				&:after
+					position absolute
+					right 50px
+					bottom 0
+					left 50px
+					border-bottom 3px solid transparent
+					content ''
+					transition 0.3s
+
+				&.active
+					&:after
+						border-bottom-color #9d7c46
+
+				a
+					display block
+					height 100%
+					background url('../img/4fc9f_5_17_31.png') right center / 17px auto no-repeat
+	
+
+.footer-layout-por
+	height 106px
+	border-top 1px solid transparent
+	border-bottom 1px solid transparent
+
+.footer-layout
+	position fixed
+	right 0
+	bottom 0
+	left 0
+	display flex
+	border-top 1px solid #fff
+	border-bottom 1px solid #fff
+	background #775f38
+
+	.item
+		position relative
+		display flex
+		flex 1
+		flex-direction column
+		justify-content center
+		align-items center
+		border-left 1px solid #fff
+		color #ffffff
+		font-size 24px
+		line-height 1.5
+		transition 0.3s
+
+		&.active
+			background #9d7c46
+
+		&:first-child
+			border-left none
+
+		.icon
+			padding 10px 0
+			height 50px
+
+			img
+				height 100%
+
+		.drop-down
+			position absolute
+			right 0
+			bottom calc(100% + 1Px)
+			left 0
+			display none
+
+			div
+				display flex
+				flex-direction column
+				padding 15px 0
+				background #775f38
+				color #ffffff
+				// border-bottom 1px solid #fff
+				font-size 28px
+
+			a
+				height 50px
+				text-align center
+				line-height 50px
+				transition 0.3s
+
+				&:active
+					background #9d7c46
+
+.msg-layout-success
+	position fixed
+	top 0
+	right 0
+	bottom 0
+	left 0
+	display none
+
+	.msg
+		position absolute
+		top 50%
+		left 50%
+		box-sizing border-box
+		padding 40px
+		width 630px
+		border-radius 20px
+		background #ffffff
+		color #353535
+		font-size 30px
+		line-height 50px
+		transform translate(-50%, -50%)
+
+.calendar
+	.calendar-content
+		top 70px
+		bottom auto
+		left 50%
+		margin 0 auto
+		padding 10px 0
+		max-width 670px
+		border-radius 5Px
+		transform translateX(-50%)
+
+		.tips-footer
+			padding-right 7%
+			padding-bottom 20px
+			color #9d7c46
+			text-align right
+			font-size 16px
+
+	.calendar-week
+		margin 15px 0 20px
+		background #eeeeee
+		color #a0a0a0
+
+		.weekend
+			color #a0a0a0
+
+		.today
+			color #9d7c46
+
+	.calendar-list
+		height auto
+
+		span
+			position relative
+			padding-bottom 15Px
+
+			.tips
+				position absolute
+				right 0
+				bottom 0
+				left 0
+				color #9d7c46
+				font-size 12px
+				line-height 20px
+
+		.weekend
+			color #a0a0a0
+
+		.today
+			background #9d7c46
+			color #ffffff
+
+		.pasted.shield
+			border-radius 50%
+			background #eeeeee
+
+			&:after, &:before
+				display none
+
+	.calendar-header
+		position relative
+		height 40Px
+
+		.year-prev
+			position absolute
+			left 0
+			box-sizing border-box
+			margin 0
+			height 40Px
+			background url('../img/23654_3_200_200.png') center center / 80% auto no-repeat
+
+		.year-next
+			position absolute
+			right 0
+			box-sizing border-box
+			margin 0
+			height 40Px
+			background url('../img/336b5_0_200_200.png') center center / 80% auto no-repeat
+
+		.month-prev
+			position absolute
+			left 100Px
+			box-sizing border-box
+			margin 0
+			height 40Px
+			background url('../img/afb51_2_200_200.png') center center / 80% auto no-repeat
+
+		.month-next
+			position absolute
+			right 100Px
+			box-sizing border-box
+			margin 0
+			height 40Px
+			background url('../img/a040d_1_200_200.png') center center / 80% auto no-repeat
+
+		.calendar-title
+			position absolute
+			left 50%
+			height 40Px
+			line-height 40Px
+
+		.calendar-month-txt
+			visibility hidden
+			margin-left 0
+
+		.calendar-year-txt
+			right 50%
+			left auto
+			visibility hidden
+			margin-left 0
+
+		.value
+			width 100%
+			text-align center
+
+
+/*
+233
+*/
