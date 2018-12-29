@@ -103,7 +103,32 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
-    <script src='js/js.js'></script>
+    <!-- <script src='js/js.js'></script> -->
+    <script>
+        $('.footer-layout .item').on('click', function (e) {
+            $(this).siblings().removeClass('active').find('.drop-down').slideUp();
+            $(this).toggleClass('active')
+            if ($(this).hasClass('child')) {
+                e.preventDefault();
+                $(this).children('.drop-down').slideToggle();
+                $('.full-background').one('click', function () {
+                    $('.footer-layout .item .drop-down').slideUp();
+                    $('.footer-layout .item').removeClass('active');
+                })
+                return false;
+            }
+        })
+
+        document.querySelector('.swiper .swiper-container') && new Swiper('.swiper .swiper-container', {
+            autoplay: 5000,
+            loop: true,
+            pagination: '.swiper-pagination',
+            autoplayDisableOnInteraction: false,
+        })
+        $('.list-c').on('click','dd',function() {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+    </script>
 </body>
 
 </html>

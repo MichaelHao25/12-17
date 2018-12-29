@@ -46,49 +46,49 @@
                     <div class="row">
                         <div class="title">专业性</div>
                         <div class="star">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
                             <div class="color">
                             </div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="title">服务态度</div>
                         <div class="star">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
                             <div class="color">
                             </div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="title">诊所环境</div>
                         <div class="star">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
                             <div class="color">
                             </div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </div>
                     <div class="row">
                         <div class="title">时效性</div>
                         <div class="star">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
                             <div class="color">
                             </div>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,15 @@
         </main>
     </div>
     <script src="js/jquery.min.js"></script>
-    <script src='js/js.js'></script>
+    <!-- <script src='js/js.js'></script> -->
+    <script>
+        $('.main .appointment-record-evaluation .container .row .star span').on('click', function (e) {
+            e.preventDefault();
+            if ($('.evaluation-list-disabled').length == 0) {
+                $(this).siblings('.color').css('width', ($(this).index()) * 20 + '%')
+            }
+        })
+    </script>
 </body>
 
 </html>

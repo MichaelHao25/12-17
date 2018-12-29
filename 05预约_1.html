@@ -95,8 +95,27 @@
 	</div>
 
 	<script src="js/jquery.min.js"></script>
-	<script src='js/js.js'></script>
+	<!-- <script src='js/js.js'></script> -->
+	<script>
+		$('.select-hospital').on('click', '.scroll span,.list .item,.type .item', function (e) {
+			e.preventDefault();
+			$(this).addClass('active').siblings().removeClass('active');
+		})
 
+		$('.footer-layout .item').on('click', function (e) {
+			$(this).siblings().removeClass('active').find('.drop-down').slideUp();
+			$(this).toggleClass('active')
+			if ($(this).hasClass('child')) {
+				e.preventDefault();
+				$(this).children('.drop-down').slideToggle();
+				$('.full-background').one('click', function () {
+					$('.footer-layout .item .drop-down').slideUp();
+					$('.footer-layout .item').removeClass('active');
+				})
+				return false;
+			}
+		})
+	</script>
 </body>
 
 </html>

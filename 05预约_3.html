@@ -26,14 +26,8 @@
 			<div class="form">
 				<div class="pt80">
 					<div class="calendar-container p0-60">
-						<input
-						type="text"
-						class="calendars input"
-						format="dd/MM/yyyy"
-						shield="['2018/12/28']"
-						appointment='{"2018/12/27":"10","2018/12/26":"10"}'
-						placeholder="选择日期"
-						>
+						<input type="text" class="calendars input" format="dd/MM/yyyy" shield="['2018/12/28']" appointment='{"2018/12/27":"10","2018/12/26":"10"}'
+						       placeholder="选择日期">
 					</div>
 					<div class="pt30">
 					</div>
@@ -68,7 +62,12 @@
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/calendar.js"></script>
-	<script src='js/js.js'></script>
+	<!-- <script src='js/js.js'></script> -->
+	<script>
+		$('.user-type .radio').on('click', function () {
+			$(this).toggleClass('active').siblings().toggleClass('active')
+		})
+	</script>
 </body>
 
 </html>
