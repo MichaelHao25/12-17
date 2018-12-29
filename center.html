@@ -11,7 +11,7 @@
 	<!-- 添加 favicon icon -->
 	<meta name="renderer" content="webkit">
 	<meta name="design-width" content="750">
-	<title>Document</title>
+	<title>会员中心</title>
 	<link rel="stylesheet" href="css/public.css" />
 	<script src="js/font-size.js"></script>
 </head>
@@ -34,9 +34,9 @@
 					<div class="modal">
 						<h3 class="title">门诊医疗</h3>
 						<div class="list">
-							<a href="#" class="item">有 <span class="cb88615">1</span> 条待评价信息</a>
-							<a href="#" class="item">我的预约</a>
-							<a href="#" class="item">我的评价</a>
+							<a href="./center_3.html" class="item">有 <span class="cb88615">1</span> 条待评价信息</a>
+							<a href="./center_2.html" class="item">我的预约</a>
+							<a href="./center_1.html" class="item">我的评价</a>
 						</div>
 					</div>
 				</div>
@@ -61,26 +61,35 @@
 			<div class="text">走进富乐</div>
 			<div class="drop-down">
 				<div>
-					<a href="#">富乐诊所</a>
+					<a href="./clinic.html">富乐诊所</a>
 					<a href="#">新闻动态</a>
 					<a href="#">热门活动</a>
 				</div>
 			</div>
 		</div>
-		<a href="#" class="item">
+		<a href="./appoinment.html" class="item">
 			<div class="icon">
 				<img src="img/4bf8d_7_50_49.png" alt="" class="w50">
 			</div>
 			<div class="text">我要预约</div>
 		</a>
-		<a href="#" class="item">
+		<div class="item child">
 			<div class="icon">
 				<img src="img/e289f_8_41_55.png" alt="" class="w41">
 			</div>
 			<div class="text">
 				我的
 			</div>
-		</a>
+
+			<div class="drop-down">
+				<div>
+					<a href="./center.html">个人中心</a>
+					<a href="./center_2.html">我的预约</a>
+					<a href="./center_1.html">我的评价</a>
+					<a href="#">企业活动</a>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script src="js/jquery.min.js"></script>
 	<!-- <script src='js/js.js'></script> -->
@@ -89,14 +98,12 @@
 			$(this).siblings().removeClass('active').find('.drop-down').slideUp();
 			$(this).toggleClass('active')
 			if ($(this).hasClass('child')) {
-				e.preventDefault();
 				$(this).children('.drop-down').slideToggle();
-				$('.full-background').one('click', function () {
-					$('.footer-layout .item .drop-down').slideUp();
-					$('.footer-layout .item').removeClass('active');
-				})
-				return false;
 			}
+		})
+		$('.full-background').one('click', function () {
+			$('.footer-layout .item .drop-down').slideUp();
+			$('.footer-layout .item').removeClass('active');
 		})
 	</script>
 </body>

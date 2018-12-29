@@ -11,19 +11,27 @@
 	<!-- 添加 favicon icon -->
 	<meta name="renderer" content="webkit">
 	<meta name="design-width" content="750">
-	<title>Document</title>
+	<title>我要预约</title>
 	<link rel="stylesheet" href="css/public.css" />
 	<script src="js/font-size.js"></script>
 </head>
 
 <body class="body-full">
 	<div class="full-background">
+
 		<header class="header">
+			<div class="brand">
+				<a href="#">
+					<img src="./img/4a2f0_0_328_77.png" alt="">
+				</a>
+			</div>
+		</header>
+		<!-- <header class="header">
 			<div class="sub-title p0-40">
 				<h1>上海市富乐静安诊所</h1>
 				<a href="#">导航</a>
 			</div>
-		</header>
+		</header> -->
 		<main class="main h100-90">
 			<div class="select-hospital h100">
 				<div class="city p0-40">
@@ -72,26 +80,36 @@
 			<div class="text">走进富乐</div>
 			<div class="drop-down">
 				<div>
-					<a href="#">富乐诊所</a>
+					<a href="./clinic.html">富乐诊所</a>
 					<a href="#">新闻动态</a>
 					<a href="#">热门活动</a>
 				</div>
 			</div>
 		</div>
-		<a href="#" class="item">
+		<a href="./appoinment.html" class="item">
 			<div class="icon">
 				<img src="img/4bf8d_7_50_49.png" alt="" class="w50">
 			</div>
 			<div class="text">我要预约</div>
 		</a>
-		<a href="#" class="item">
-			<div class="icon">
-				<img src="img/e289f_8_41_55.png" alt="" class="w41">
+		
+		<div class="item child">
+				<div class="icon">
+					<img src="img/e289f_8_41_55.png" alt="" class="w41">
+				</div>
+				<div class="text">
+					我的
+				</div>
+	
+				<div class="drop-down">
+					<div>
+						<a href="./center.html">个人中心</a>
+						<a href="./center_2.html">我的预约</a>
+						<a href="./center_1.html">我的评价</a>
+						<a href="#">企业活动</a>
+					</div>
+				</div>
 			</div>
-			<div class="text">
-				我的
-			</div>
-		</a>
 	</div>
 
 	<script src="js/jquery.min.js"></script>
@@ -106,14 +124,12 @@
 			$(this).siblings().removeClass('active').find('.drop-down').slideUp();
 			$(this).toggleClass('active')
 			if ($(this).hasClass('child')) {
-				e.preventDefault();
 				$(this).children('.drop-down').slideToggle();
-				$('.full-background').one('click', function () {
-					$('.footer-layout .item .drop-down').slideUp();
-					$('.footer-layout .item').removeClass('active');
-				})
-				return false;
 			}
+		})
+		$('.full-background').one('click', function () {
+			$('.footer-layout .item .drop-down').slideUp();
+			$('.footer-layout .item').removeClass('active');
 		})
 	</script>
 </body>

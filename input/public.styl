@@ -14,13 +14,15 @@ body
 
 body.body-full
 	max-width 750Px
+button
+	outline none
 
 body
 	position relative
 
 input
 	&::placeholder
-		font-family 'mocrosoft Yahei'
+		font-family 'Microsoft YaHei'
 
 .df
 	display flex
@@ -51,7 +53,7 @@ input
 	padding-top 180px
 
 .pt220
-	padding-top 220px
+	padding-top 150px
 
 .pb30
 	padding-bottom 30px
@@ -72,14 +74,13 @@ input
 	height 100%
 
 .h100-90
-	height calc(100vh - 90px)
+	height calc(100vh - 120px)
 
 .h100-91
 	height calc(100% - 92px)
 
 .h100-196
 	height calc(100% - 196px - 3Px)
-
 .full-background
 	min-height 100vh
 	background url('../img/ae7d6_1_750_1334.jpg') center center / cover no-repeat
@@ -141,6 +142,7 @@ input
 		background #ffffff
 		color #332914
 		font-size 28px
+		visibility hidden
 
 		&.active
 			&:after
@@ -213,8 +215,8 @@ input
 			outline none
 			border none
 			border-radius 3px
-			background #132442
-			color #ffffff
+			background #fff
+			color #727980
 			font-size 30px
 
 			&::placeholder
@@ -231,12 +233,15 @@ input
 			background #947338
 			color #ffffff
 			font-size 36px
+			padding 0
 
 		.more-option
 			display flex
 			justify-content space-around
 			color #727171
 			font-size 30px
+			&.jc-fd
+				justify-content flex-end
 
 			a+a
 				color #947338
@@ -427,7 +432,6 @@ input
 
 	.appointment-record-list
 		overflow hidden
-		margin-top 1px
 
 		.item
 			margin-bottom 28px
@@ -498,10 +502,15 @@ input
 				color #727980
 				font-size 28px
 				line-height 1.5
+				&.bd-t
+					&:first-child
+						border-top 1px solid #e5e5e4
 			.reply
 				padding-top 20px
 				padding-bottom 20px
 				background #ffffff
+				&.pt-0
+					padding-top 0
 				.servers
 					padding 10px 20px
 					line-height 1.5
@@ -512,7 +521,43 @@ input
 				a
 					font-size 28px
 					color #b2801d
-					margin-top 15px
+					&.mt-15
+						margin-top 15px
+			.reply-container
+				display none
+			.text
+				display flex
+				flex-direction column
+				padding 25px 0 0
+
+				textarea
+					margin-bottom 20px
+					padding 8px 15px
+					min-width 190px
+					outline none
+					border 1px solid #e5e5e4
+					border-radius 5px
+					color #353535
+					font-size 28px
+					line-height 2
+
+					&::placeholder
+						color #727980
+
+				button
+
+					width 140px
+					height 54px
+					border-radius 27px
+					background #b2801d
+					color #ffffff
+					text-align center
+					line-height 54px
+					padding 0
+					font-size 28px
+					border none
+					outline none
+					
 
 	.appointment-record-evaluation
 		.title-r
@@ -595,6 +640,9 @@ input
 				color #fafafa
 				text-align center
 				line-height 80px
+				font-size 28px
+				padding 0
+				border none
 	.evaluation-list-disabled
 		border-bottom 1px solid #e5e5e4
 		.title-r
@@ -802,9 +850,9 @@ input
 				font-size 28px
 
 			a
-				height 50px
+				height 60px
 				text-align center
-				line-height 50px
+				line-height 60px
 				transition 0.3s
 
 				&:active

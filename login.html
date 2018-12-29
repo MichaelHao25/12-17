@@ -11,8 +11,7 @@
 	<!-- 添加 favicon icon -->
 	<meta name="renderer" content="webkit">
 	<meta name="design-width" content="750">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/calendar.css">
+	<title>登录</title>
 	<link rel="stylesheet" href="css/public.css" />
 	<script src="js/font-size.js"></script>
 </head>
@@ -20,50 +19,52 @@
 <body class="body-full">
 	<div class="full-background">
 		<header class="header">
-			<h1 class="main-title">自主预约</h1>
+			<div class="brand">
+				<a href="#">
+					<img src="./img/4a2f0_0_328_77.png" alt="">
+				</a>
+			</div>
 		</header>
 		<main class="main">
+			<div class="language">
+				<span>EN</span>
+				<span class="active">中</span>
+			</div>
 			<div class="form">
-				<div class="pt80">
-					<div class="calendar-container p0-60">
-						<input type="text" class="calendars input" format="dd/MM/yyyy" shield="['2018/12/28']" appointment='{"2018/12/27":"10","2018/12/26":"10"}'
-						       placeholder="选择日期">
-					</div>
-					<div class="pt30">
-					</div>
-					<div class="user-type p0-90 jc-fs">
-						<div class="radio active">上午</div>
-						<div class="radio ml30">下午</div>
+				<div class="pt220">
+					<div class="user-type">
+						<div class="radio active">个人用户</div>
+						<div class="radio">企业用户</div>
 					</div>
 					<div class="p0-60 df">
 						<div class="pt30">
 						</div>
 						<div class="pb10">
-							<input type="text" class="input" placeholder="备注留言">
+							<input type="text" class="input" placeholder="请输入您的手机号">
 						</div>
 						<div class="pb10">
-							<input type="text" class="input" placeholder="其它字段">
+							<input type="text" class="input" placeholder="请输入您的密码">
 						</div>
 						<div class="pt30"></div>
-						<button class="submit js_layout">提交预约申请</button>
-						<div class="pt140"></div>
-						<div class="time-tel">
-							<p class="fz30">预约热线：<span class="cb88400">020-66668888</span></p>
-							<p>周一至周六 8:30-12:00 / 13:00-17:30</p>
+						<button class="submit">登录</button>
+						<div class="pt40"></div>
+						<div class="more-option">
+							<a href="./find.html">找回密码</a>
+							<a href="./register.html">立即注册</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</main>
-		<div class="msg-layout-success">
-			<div class="msg">您的预约申请提交成功，我们将在24小时内给您回复预约结果。</div>
-		</div>
 	</div>
 
 	<script src="js/jquery.min.js"></script>
-	<script src="js/calendar.js"></script>
 	<!-- <script src='js/js.js'></script> -->
 	<script>
+		$('.language').on('click', function () {
+			$(this).children('span').toggleClass('active')
+			$('.language').toggleClass('active');
+		})
 		$('.user-type .radio').on('click', function () {
 			$(this).toggleClass('active').siblings().toggleClass('active')
 		})

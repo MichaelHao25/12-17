@@ -11,7 +11,7 @@
 	<!-- 添加 favicon icon -->
 	<meta name="renderer" content="webkit">
 	<meta name="design-width" content="750">
-	<title>Document</title>
+	<title>会员中心</title>
 	<link rel="stylesheet" href="css/public.css" />
 	<script src="js/font-size.js"></script>
 </head>
@@ -97,8 +97,24 @@
 					</div>
 					<div class="reply p0-50">
 						<div class="servers">客服回复：感谢您宝贵的建议，我们会尽可能处理。</div>
+					</div>
+					<div class="js-reply">
+						<!-- <div class="result bd-t p0-50">
+							此次体验非常愉快，服务态度很好，请问下次能否再安排的合理些
+						</div> -->
+					</div>
+					<div class="reply pt-0 p0-50">
 						<div class="clear">
-							<a href="#" class="fr">追加评论</a>
+							<a href="#" class="fr append mt-15">追加评论</a>
+						</div>
+						<div class="reply-container">
+							<div class="text">
+								<textarea name="" id="" placeholder="如您还有其他意见与建议，请告知我们。" class="js-value"></textarea>
+
+								<div class="clear">
+									<button class="fr js-submit">提交</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -124,6 +140,23 @@
 
 	<script src="js/jquery.min.js"></script>
 	<!-- <script src='js/js.js'></script> -->
+	<script>
+		$('.main .appointment-record-list .item .reply').on('click', '.append', function (e) {
+			e.preventDefault();
+			console.log('append');
+			$('.main .appointment-record-list .item .reply-container').fadeIn();
+		})
+		$('.main .appointment-record-list .item .reply').on('click', '.js-submit', function (e) {
+			e.preventDefault();
+			var value = $('.js-value').val();
+
+			var elements = '<div class="result bd-t p0-50">' + value + '</div>';
+			// $('.main .appointment-record-list .item .reply-container').fadeIn();
+			$('.main .appointment-record-list .item .js-reply').append(elements)
+			$('.main .appointment-record-list .item .reply-container').hide();
+			$('.js-value').val('')
+		})
+	</script>
 </body>
 
 </html>

@@ -14,20 +14,23 @@ body {
 body.body-full {
   max-width: 750Px;
 }
+button {
+  outline: none;
+}
 body {
   position: relative;
 }
 input::-webkit-input-placeholder {
-  font-family: 'mocrosoft Yahei';
+  font-family: 'Microsoft YaHei';
 }
 input:-ms-input-placeholder {
-  font-family: 'mocrosoft Yahei';
+  font-family: 'Microsoft YaHei';
 }
 input::-ms-input-placeholder {
-  font-family: 'mocrosoft Yahei';
+  font-family: 'Microsoft YaHei';
 }
 input::placeholder {
-  font-family: 'mocrosoft Yahei';
+  font-family: 'Microsoft YaHei';
 }
 .df {
   display: -webkit-box;
@@ -68,7 +71,7 @@ input::placeholder {
   padding-top: 1.8rem;
 }
 .pt220 {
-  padding-top: 2.2rem;
+  padding-top: 1.5rem;
 }
 .pb30 {
   padding-bottom: 0.3rem;
@@ -89,7 +92,7 @@ input::placeholder {
   height: 100%;
 }
 .h100-90 {
-  height: calc(100vh - 0.9rem);
+  height: calc(100vh - 1.2rem);
 }
 .h100-91 {
   height: calc(100% - 0.92rem);
@@ -173,6 +176,7 @@ input::placeholder {
   background: #fff;
   color: #332914;
   font-size: 0.28rem;
+  visibility: hidden;
 }
 .main .language.active:after {
   right: 0.63rem;
@@ -258,8 +262,8 @@ input::placeholder {
   outline: none;
   border: none;
   border-radius: 0.03rem;
-  background: #132442;
-  color: #fff;
+  background: #fff;
+  color: #727980;
   font-size: 0.3rem;
 }
 .main .form .input::-webkit-input-placeholder {
@@ -285,6 +289,7 @@ input::placeholder {
   background: #947338;
   color: #fff;
   font-size: 0.36rem;
+  padding: 0;
 }
 .main .form .more-option {
   display: -webkit-box;
@@ -294,6 +299,11 @@ input::placeholder {
       justify-content: space-around;
   color: #727171;
   font-size: 0.3rem;
+}
+.main .form .more-option.jc-fd {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .main .form .more-option a+a {
   color: #947338;
@@ -494,7 +504,6 @@ input::placeholder {
 }
 .main .appointment-record-list {
   overflow: hidden;
-  margin-top: 1px;
 }
 .main .appointment-record-list .item {
   margin-bottom: 0.28rem;
@@ -581,10 +590,16 @@ input::placeholder {
   font-size: 0.28rem;
   line-height: 1.5;
 }
+.main .appointment-record-list .item .result.bd-t:first-child {
+  border-top: 1px solid #e5e5e4;
+}
 .main .appointment-record-list .item .reply {
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   background: #fff;
+}
+.main .appointment-record-list .item .reply.pt-0 {
+  padding-top: 0;
 }
 .main .appointment-record-list .item .reply .servers {
   padding: 0.1rem 0.2rem;
@@ -597,7 +612,58 @@ input::placeholder {
 .main .appointment-record-list .item .reply a {
   font-size: 0.28rem;
   color: #b2801d;
+}
+.main .appointment-record-list .item .reply a.mt-15 {
   margin-top: 0.15rem;
+}
+.main .appointment-record-list .item .reply-container {
+  display: none;
+}
+.main .appointment-record-list .item .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.25rem 0 0;
+}
+.main .appointment-record-list .item .text textarea {
+  margin-bottom: 0.2rem;
+  padding: 0.08rem 0.15rem;
+  min-width: 1.9rem;
+  outline: none;
+  border: 1px solid #e5e5e4;
+  border-radius: 0.05rem;
+  color: #353535;
+  font-size: 0.28rem;
+  line-height: 2;
+}
+.main .appointment-record-list .item .text textarea::-webkit-input-placeholder {
+  color: #727980;
+}
+.main .appointment-record-list .item .text textarea:-ms-input-placeholder {
+  color: #727980;
+}
+.main .appointment-record-list .item .text textarea::-ms-input-placeholder {
+  color: #727980;
+}
+.main .appointment-record-list .item .text textarea::placeholder {
+  color: #727980;
+}
+.main .appointment-record-list .item .text button {
+  width: 1.4rem;
+  height: 0.54rem;
+  border-radius: 0.27rem;
+  background: #b2801d;
+  color: #fff;
+  text-align: center;
+  line-height: 0.54rem;
+  padding: 0;
+  font-size: 0.28rem;
+  border: none;
+  outline: none;
 }
 .main .appointment-record-evaluation .title-r {
   height: 0.8rem;
@@ -619,6 +685,7 @@ input::placeholder {
   background: #fff;
 }
 .main .appointment-record-evaluation .container .row {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -704,6 +771,9 @@ input::placeholder {
   color: #fafafa;
   text-align: center;
   line-height: 0.8rem;
+  font-size: 0.28rem;
+  padding: 0;
+  border: none;
 }
 .main .evaluation-list-disabled {
   border-bottom: 1px solid #e5e5e4;
@@ -953,9 +1023,9 @@ input::placeholder {
   font-size: 0.28rem;
 }
 .footer-layout .item .drop-down a {
-  height: 0.5rem;
+  height: 0.6rem;
   text-align: center;
-  line-height: 0.5rem;
+  line-height: 0.6rem;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
