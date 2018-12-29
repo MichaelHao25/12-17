@@ -1023,9 +1023,9 @@ input::placeholder {
   font-size: 0.28rem;
 }
 .footer-layout .item .drop-down a {
-  height: 0.6rem;
+  height: 0.7rem;
   text-align: center;
-  line-height: 0.6rem;
+  line-height: 0.7rem;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
