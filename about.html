@@ -11,7 +11,7 @@
     <!-- 添加 favicon icon -->
     <meta name="renderer" content="webkit">
     <meta name="design-width" content="750">
-    <title>走进福乐</title>
+    <title>富乐诊所</title>
     <link rel="stylesheet" href="css/public.css" />
     <script src="js/font-size.js"></script>
 </head>
@@ -36,16 +36,15 @@
                 <div class="container h100-91">
                     <div class="full-background flex-1 auto">
                         <div class="list">
-                            <div class="item full-row active">
+                            <a href="./clinic.html" class="item full-row active">
                                 上海市富乐静安诊所
-                            </div>
-                            <div class="item full-row">
+                            </a>
+                            <a href="./clinic.html" class="item full-row">
                                 上海市富乐徐汇诊所
-                            </div>
-                            <div class="item full-row">
+                            </a>
+                            <a href="./clinic.html" class="item full-row">
                                 上海市富乐浦东诊所
-                            </div>
-
+                            </a>
                             <div class="footer-layout-por">
 
                             </div>
@@ -98,8 +97,8 @@
     <!-- <script src='js/js.js'></script> -->
     <script>
         $('.select-hospital').on('click', '.scroll span,.list .item,.type .item', function (e) {
-            e.preventDefault();
             $(this).addClass('active').siblings().removeClass('active');
+            // e.preventDefault();
         })
 
         $('.footer-layout .item').on('click', function (e) {

@@ -387,6 +387,7 @@ input::placeholder {
   font-size: 0.32rem;
 }
 .main .select-hospital .container .list .item {
+  display: block;
   overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
