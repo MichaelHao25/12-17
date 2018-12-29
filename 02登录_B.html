@@ -58,8 +58,15 @@
 		</main>
 	</div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src='js/js.js'></script>
+	<script src="js/jquery.min.js"></script>
+	<script src='js/js.js'></script>
+	<script>
+		alert('11');
+		$('.language').on('click', function () {
+			$(this).children('span').toggleClass('active')
+			$('.language').toggleClass('active');
+		})
+	</script>
 </body>
 
 </html>
